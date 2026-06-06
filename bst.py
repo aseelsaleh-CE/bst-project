@@ -26,5 +26,19 @@ class BinarySearchTree:
                     current.right = Node(value)
                     return 
                 current = current. right
-            
+    
+    def search(self, value):
+        current = self.root
+        
+        if value == current.value:
+            return True
+        
+        while current :
+            if value < current.value:
+                current = current.left
+            else:
+                current = current.right
+    
+        return False
+        
         
